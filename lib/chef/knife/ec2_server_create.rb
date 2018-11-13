@@ -531,6 +531,7 @@ class Chef
           msg_pair("Subnet ID", @server.subnet_id)
           msg_pair("Tenancy", @server.tenancy)
           if config[:associate_public_ip]
+            msg_pair("Public IP Address", @server.public_ip_address)
             msg_pair("Public DNS Name", @server.dns_name)
           end
           if elastic_ip
